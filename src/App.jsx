@@ -1,16 +1,13 @@
 import "./App.css";
-import Copyright from "./components/Copyright";
-import Header from "./components/Header";
+import Admin from "./pages/Admin"; // ← à importer si ce n’est pas encore fait
 import Home from "./pages/Home";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Home />
-      <Copyright />
-    </>
-  );
+  // Récupère les paramètres de l'URL
+  const searchParams = new URLSearchParams(window.location.search);
+  const isAdmin = searchParams.get("pages") === "admin";
+
+  return <>{isAdmin ? <Admin /> : <Home />}</>;
 }
 
 export default App;

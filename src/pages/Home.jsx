@@ -1,6 +1,8 @@
 import { useProductFilterStore } from "@/hooks/useProductFilterStore";
 import { useEffect, useState } from "react";
 import CategoryTabs from "../components/CategoryTabs";
+import Copyright from "../components/Copyright";
+import Header from "../components/Header";
 import ProductList from "../components/ProductList";
 
 const categories = [
@@ -46,27 +48,31 @@ const Home = () => {
   }, [selectedCategory, searchTerm]); // ← écoute aussi searchTerm
 
   return (
-    <div className="max-w-4xl mx-auto px-4 min-h-lvh">
-      <CategoryTabs
-        categoryFilter={selectedCategory}
-        setCategoryFilter={setCategory}
-        categories={categories}
-      />
+    <>
+      <Header />
+      <div className="max-w-4xl mx-auto px-4 min-h-lvh">
+        <CategoryTabs
+          categoryFilter={selectedCategory}
+          setCategoryFilter={setCategory}
+          categories={categories}
+        />
 
-      <div className="mt-4">
-        {/* Place ton SearchBar ici si ce n’est pas déjà fait */}
-        {/* <SearchBar /> */}
+        <div className="mt-4">
+          {/* Place ton SearchBar ici si ce n’est pas déjà fait */}
+          {/* <SearchBar /> */}
 
-        {loading ? (
-          <p>Chargement...</p>
-        ) : (
-          <ProductList
-            filtered={filtered}
-            category={categories.find((c) => c.slug === selectedCategory)}
-          />
-        )}
+          {loading ? (
+            <p>Chargement...</p>
+          ) : (
+            <ProductList
+              filtered={filtered}
+              category={categories.find((c) => c.slug === selectedCategory)}
+            />
+          )}
+        </div>
       </div>
-    </div>
+      <Copyright />
+    </>
   );
 };
 
