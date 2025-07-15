@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "name": "Samoussa viande",
+    "category": "snacks",
+    "price": 3000,
+    "image": "/produits/samoussas.jpg"
+  },
+  {
+    "id": 2,
+    "name": "THB GM",
+    "category": "boissons",
+    "price": 6000,
+    "image": "/produits/thb-gm.png"
+  },
+  {
+    "id": 3,
+    "name": "Escalope croustillante",
+    "category": "snacks",
+    "price": 14000,
+    "image": "/produits/escalope-croustillante.jpg"
+  },
+  {
+    "id": 4,
+    "name": "THB PM",
+    "category": "boissons",
+    "price": 5000,
+    "image": "/produits/thb-pm.png"
+  },
+  {
+    "id": 5,
+    "name": "Chicken burger",
+    "category": "snacks",
+    "price": 12000,
+    "image": "/produits/chicken-burger.png"
+  },
+  {
+    "id": 6,
+    "name": "Baileys Original",
+    "category": "boissons",
+    "price": 25000,
+    "image": "/produits/baileys-original.png"
+  },
+  {
+    "id": 7,
+    "name": "Nem crevettes",
+    "category": "snacks",
+    "price": 4000,
+    "image": "/produits/nem.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Canette THB",
+    "category": "boissons",
+    "price": 4000,
+    "image": "/produits/thb-canette.png"
+  },
+  {
+    "id": 9,
+    "name": "Tartare de poisson",
+    "category": "snacks",
+    "price": 17000,
+    "image": "/produits/tartare-de-poisson.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Corona extra",
+    "category": "boissons",
+    "price": 12000,
+    "image": "/produits/corona-extra.png"
+  },
+  {
+    "id": 11,
+    "name": "Gold blanche",
+    "category": "boissons",
+    "price": 15000,
+    "image": "/produits/gold-blanche.png"
+  },
+  {
+    "id": 12,
+    "name": "Crevettes à la provencale",
+    "category": "snacks",
+    "price": 8000,
+    "image": "/produits/crevettes-a-la-provencale.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Fresh",
+    "category": "boissons",
+    "price": 18000,
+    "image": "/produits/fresh.png"
+  },
+  {
+    "id": 14,
+    "name": "J&B Rare 70 CL",
+    "category": "boissons",
+    "price": 4000,
+    "image": "/produits/j-b-rare.png"
+  }
+]
