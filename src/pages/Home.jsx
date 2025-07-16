@@ -56,7 +56,7 @@ const Home = () => {
         <div className="flex h-screen w-screen">
           <div
             className="basis-1/2 flex items-center justify-center cursor-pointer bg-orange-500 text-white text-5xl"
-            onClick={() => navigate("/categorie/snack")}
+            onClick={() => navigate("/categorie/snacks")}
           >
             Snacks
           </div>
