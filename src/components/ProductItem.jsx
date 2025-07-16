@@ -38,12 +38,14 @@ const ProductItem = ({ product }) => {
             )}
           </div>
           <div className="px-3">
-            <h3 className="text-base mb-2 text-white">{product.name}</h3>
-            <div className="flex justify-between gap-3 items-start">
-              <p className="m-0 text-[14px] text-white">
-                {product.price?.toLocaleString?.()} Ar
-              </p>
-              <Button className="cursor-pointer h-auto">
+            <div className="flex justify-between gap-3 items-end">
+              <div className="flex flex-col">
+                <h3 className="text-base  text-white">{product.name}</h3>
+                <p className="m-0 text-[14px] text-white">
+                  {product.price?.toLocaleString?.()} Ar
+                </p>
+              </div>
+              <Button className="cursor-pointer h-auto text-white">
                 <Search />
               </Button>
             </div>
