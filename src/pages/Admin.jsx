@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
+import Dashboard from "../features/admin/Dashboard";
 
 // Encode en base64 (pour chaînes ASCII simples)
 const encode = (str) => btoa(str);
@@ -69,9 +70,7 @@ const Admin = () => {
         </DialogContent>
       </Dialog>
 
-      {authenticated && (
-        <div className="p-4">🎉 Bienvenue dans l’espace Admin</div>
-      )}
+      {authenticated && <Dashboard />}
     </>
   );
 };

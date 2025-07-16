@@ -1,100 +1,704 @@
-[
+﻿[
   {
     "id": 1,
     "name": "Samoussa viande",
-    "category": "snacks",
+    "sous_category": "",
     "price": 3000,
-    "image": "/produits/samoussas.jpg"
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
   },
   {
     "id": 2,
     "name": "THB GM",
-    "category": "boissons",
+    "sous_category": "",
     "price": 6000,
-    "image": "/produits/thb-gm.png"
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
   },
   {
     "id": 3,
-    "name": "Escalope croustillante",
-    "category": "snacks",
-    "price": 14000,
-    "image": "/produits/escalope-croustillante.jpg"
+    "name": "GOLD BLANCHE GM",
+    "sous_category": "",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
   },
   {
     "id": 4,
-    "name": "THB PM",
+    "name": "GOLD BLONDE GM",
+    "sous_category": "",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
-    "price": 5000,
-    "image": "/produits/thb-pm.png"
+    "images_supplementaires": []
   },
   {
     "id": 5,
-    "name": "Chicken burger",
-    "category": "snacks",
-    "price": 12000,
-    "image": "/produits/chicken-burger.png"
+    "name": "GOLD 8% GM",
+    "sous_category": "",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
   },
   {
     "id": 6,
-    "name": "Baileys Original",
+    "name": "QUEENS",
+    "sous_category": "",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
-    "price": 25000,
-    "image": "/produits/baileys-original.png"
+    "images_supplementaires": []
   },
   {
     "id": 7,
-    "name": "Nem crevettes",
-    "category": "snacks",
-    "price": 4000,
-    "image": "/produits/nem.jpg"
+    "name": "CANETTE THB",
+    "sous_category": "",
+    "price": 7000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
   },
   {
     "id": 8,
-    "name": "Canette THB",
+    "name": "CANETTE GOLD BLANCHE",
+    "sous_category": "",
+    "price": 7500,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
-    "price": 4000,
-    "image": "/produits/thb-canette.png"
+    "images_supplementaires": []
   },
   {
     "id": 9,
-    "name": "Tartare de poisson",
-    "category": "snacks",
-    "price": 17000,
-    "image": "/produits/tartare-de-poisson.jpeg"
+    "name": "CANETTE BEAUFORT",
+    "sous_category": "",
+    "price": 8000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
   },
   {
     "id": 10,
-    "name": "Corona extra",
+    "name": "THB PM",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
-    "price": 12000,
-    "image": "/produits/corona-extra.png"
+    "images_supplementaires": []
   },
   {
     "id": 11,
-    "name": "Gold blanche",
+    "name": "GOLD BLANCHE PM",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
-    "price": 15000,
-    "image": "/produits/gold-blanche.png"
+    "images_supplementaires": []
   },
   {
     "id": 12,
-    "name": "Crevettes à la provencale",
-    "category": "snacks",
-    "price": 8000,
-    "image": "/produits/crevettes-a-la-provencale.jpg"
+    "name": "BEAUFORT PM",
+    "sous_category": "",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
   },
   {
     "id": 13,
-    "name": "Fresh",
+    "name": "RACINE",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
-    "price": 18000,
-    "image": "/produits/fresh.png"
+    "images_supplementaires": []
   },
   {
     "id": 14,
-    "name": "J&B Rare 70 CL",
+    "name": "XXL",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
     "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 15,
+    "name": "DYNAMIC",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 16,
+    "name": "LE FRUIT",
+    "sous_category": "",
+    "price": 7000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 17,
+    "name": "JUS GM",
+    "sous_category": "",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 18,
+    "name": "JUS PM",
+    "sous_category": "",
+    "price": 3500,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 19,
+    "name": "EAUVIVE GM",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 20,
+    "name": "CRISTALLINE",
+    "sous_category": "",
+    "price": 3000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 21,
+    "name": "VISY GASY",
+    "sous_category": "",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 22,
+    "name": "BLACK LABEL",
+    "sous_category": "",
+    "price": 70000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 23,
+    "name": "GREEN LABEL",
+    "sous_category": "",
+    "price": 70000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 24,
+    "name": "JOHN PETER\u0027S",
+    "sous_category": "",
+    "price": 60000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 25,
+    "name": "CUVEE BLANCHE 70CL",
+    "sous_category": "",
+    "price": 30000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 26,
+    "name": "CUVEE BLANCHE 35CL",
+    "sous_category": "",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 27,
+    "name": "CUVEE NOIRE 70CL",
+    "sous_category": "",
+    "price": 30000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 28,
+    "name": "CUVEE NOIRE 35CL",
+    "sous_category": "",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 29,
+    "name": "GUARDE HOUSE 70CL",
+    "sous_category": "",
+    "price": 25000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 30,
+    "name": "GUARDE HOUSE 35CL",
+    "sous_category": "",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 31,
+    "name": "GOLD MASTER 70CL",
+    "sous_category": "",
+    "price": 30000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 32,
+    "name": "GOLD MASTER 35CL",
+    "sous_category": "",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 33,
+    "name": "GOLDEN SCAN 70CL",
+    "sous_category": "",
+    "price": 40000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 34,
+    "name": "MARKOVITCH 70CL",
+    "sous_category": "",
+    "price": 30000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 35,
+    "name": "BRIGHTON 70CL",
+    "sous_category": "",
+    "price": 30000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 36,
+    "name": "VODKA 70CL",
+    "sous_category": "",
+    "price": 25000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 37,
+    "name": "VODKA 30CL",
+    "sous_category": "",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 38,
+    "name": "RED LABEL",
+    "sous_category": "",
+    "price": 250000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "boissons",
+    "images_supplementaires": []
+  },
+  {
+    "id": 39,
+    "name": "Pomme Frite",
+    "sous_category": "apero",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 40,
+    "name": "Frite au Fromage",
+    "sous_category": "apero",
+    "price": 8000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 41,
+    "name": "Sambos",
+    "sous_category": "apero",
     "price": 4000,
-    "image": "/produits/j-b-rare.png"
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 42,
+    "name": "Mine-sao Viande",
+    "sous_category": "pasta",
+    "price": 7000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 43,
+    "name": "Mine-sao Poulet",
+    "sous_category": "pasta",
+    "price": 7000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 44,
+    "name": "Mine-sao Crevette",
+    "sous_category": "pasta",
+    "price": 9000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 45,
+    "name": "Mine-sao PATTAYA",
+    "sous_category": "pasta",
+    "price": 12000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 46,
+    "name": "Spaghetti Bolognaise",
+    "sous_category": "pasta",
+    "price": 10000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 47,
+    "name": "PIZZA Poulet\nsauce tomate,poulet,fromage,origan",
+    "sous_category": "pizza",
+    "price": 20000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 48,
+    "name": "PIZZA aux fruits de mer \nsauce tomate , crevette , fromage , poivron , origan",
+    "sous_category": "pizza",
+    "price": 23000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 49,
+    "name": "PIZZA PATTAYA\nsauce tomate , fromage , crevette , poulet , origan",
+    "sous_category": "pizza",
+    "price": 25000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 50,
+    "name": "PIZZA Poulet laqué extra\nsauce tomate , fromage , poulet laqué , poivron , mortadelle",
+    "sous_category": "pizza",
+    "price": 25000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 51,
+    "name": "Tacos viande",
+    "sous_category": "tacos",
+    "price": 10000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 52,
+    "name": "Tacos poulet",
+    "sous_category": "tacos",
+    "price": 12000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 53,
+    "name": "Tacos PATTAYA",
+    "sous_category": "tacos",
+    "price": 13000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 54,
+    "name": "Salade verte",
+    "sous_category": "salade",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 55,
+    "name": "Salade aux oeufs durs",
+    "sous_category": "salade",
+    "price": 7000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 56,
+    "name": "Salade avec sardine",
+    "sous_category": "salade",
+    "price": 10000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 57,
+    "name": "Salade Pattaya",
+    "sous_category": "salade",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 58,
+    "name": "Salade Ceasar",
+    "sous_category": "salade",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 59,
+    "name": "Salade Thon à l\u0027oeufs Mimosa",
+    "sous_category": "salade",
+    "price": 12000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 60,
+    "name": "Brochette crevette",
+    "sous_category": "meat lover",
+    "price": 3000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 61,
+    "name": "Brochette viande\n5 pièces",
+    "sous_category": "meat lover",
+    "price": 5000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 62,
+    "name": "Brochette poulet",
+    "sous_category": "meat lover",
+    "price": 2000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 63,
+    "name": "Poulet Grillé",
+    "sous_category": "meat lover",
+    "price": 4000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 64,
+    "name": "Poulet 1/2",
+    "sous_category": "meat lover",
+    "price": 2200,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 65,
+    "name": "Entrecote",
+    "sous_category": "meat lover",
+    "price": 10000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 66,
+    "name": "ZEBU 500g",
+    "sous_category": "meat lover",
+    "price": 25000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 67,
+    "name": "Poulet pané",
+    "sous_category": "meat lover",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 68,
+    "name": "Directeur\npoulet , crevette , légumes",
+    "sous_category": "meat lover",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 69,
+    "name": "Crevette pané",
+    "sous_category": "fruits de mer",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 70,
+    "name": "Beignet de crevette",
+    "sous_category": "fruits de mer",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 71,
+    "name": "Thon frite",
+    "sous_category": "fruits de mer",
+    "price": 6000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 72,
+    "name": "Poisson frite",
+    "sous_category": "fruits de mer",
+    "price": 10000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 73,
+    "name": "Poisson frite",
+    "sous_category": "fruits de mer",
+    "price": 20000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 74,
+    "name": "Poisson frite",
+    "sous_category": "fruits de mer",
+    "price": 15000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 75,
+    "name": "Poisson frite",
+    "sous_category": "fruits de mer",
+    "price": 25000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 76,
+    "name": "Poisson frite",
+    "sous_category": "fruits de mer",
+    "price": 30000,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 77,
+    "name": "Pomme frite",
+    "sous_category": "accompagnements",
+    "price": 0,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
+  },
+  {
+    "id": 78,
+    "name": "Légumes sauté",
+    "sous_category": "accompagnements",
+    "price": 0,
+    "image": "/images/produits/corona-extra.png",
+    "category": "snacks",
+    "images_supplementaires": []
   }
 ]

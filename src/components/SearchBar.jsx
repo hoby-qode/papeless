@@ -3,8 +3,10 @@ import { Input } from "@/components/ui/input";
 import { useProductFilterStore } from "@/hooks/useProductFilterStore";
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { useParams } from "react-router";
 
 const SearchBar = () => {
+  const { category } = useParams();
   const setSearchTerm = useProductFilterStore((state) => state.setSearchTerm);
   const searchTerm = useProductFilterStore((state) => state.searchTerm);
 
@@ -21,13 +23,16 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex gap-1 items-center border rounded-md py-1.5 px-3">
+    <div className="flex gap-1 items-center border border-white rounded-md py-1.5 px-3">
       <Input
         type="search"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={handleKeyPress}
-        placeholder="Recherche..."
+        onBlur={handleSearch}
+        placeholder={`Chercher ${
+          category === "boissons" ? "à boire" : "à manger"
+        }`}
         className="border-none shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 py-1 h-8"
       />
 

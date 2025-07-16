@@ -1,90 +1,39 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-const ProductList = ({ filtered, category }) => {
+import { LinkIcon } from "lucide-react";
+import ProductItem from "./ProductItem";
+
+const ProductList = ({ products, categories }) => {
+  if (!products || Object.keys(products).length === 0) {
+    return <p>Aucun produit disponible.</p>;
+  }
+  const scrollToAnchor = (slug) => {
+    const anchor = document.getElementById(slug);
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
-    <div className="">
-      <h2 className="text-2xl mb-10">
-        {category.icon} {category.slug != "all" && "Nos"} {category.name}
-      </h2>
-      <div className="grid grid-cols-4 gap-4">
-        {filtered.map((product) => (
-          <Dialog key={product.id} className="bg-card">
-            <DialogTrigger asChild>
-              <div className="border p-2 rounded-[8px] cursor-pointer group">
-                <div
-                  className={`h-40 w-full rounded-[7px] bg-card  overflow-hidden mb-2 ${
-                    product.category == "boissons"
-                      ? "border border-[#3F3D4F]"
-                      : ""
-                  }`}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className={`w-full group-hover:scale-110 transition-all h-full  ${
-                      product.category === "boissons"
-                        ? "object-contain"
-                        : "object-cover"
-                    }`}
-                  />
-                </div>
-                <h3 className="text-base mb-1.5 text-white">{product.name}</h3>
-                <p className="m-0 text-[14px] text-white">{product.price} Ar</p>
-              </div>
-            </DialogTrigger>
-            <DialogContent className="bg-card">
-              <DialogHeader className="flex justify-center">
-                <DialogTitle className="text-center text-3xl text-white">
-                  {product.name}
-                </DialogTitle>
-                <DialogDescription className="hidden">
-                  {product.name}
-                </DialogDescription>
-              </DialogHeader>
-              <div className="flex flex-col items-center gap-4 text-sm">
-                <Carousel className="w-full max-w-xs">
-                  <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <CarouselItem key={index} className="">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className={`w-full h-full  ${
-                            product.category === "boissons"
-                              ? "object-contain"
-                              : "object-cover"
-                          }`}
-                        />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-                <p>
-                  Catégorie : <strong>{product.category}</strong>
-                </p>
-                <p>
-                  Prix : <strong>{product.price.toLocaleString()} Ar</strong>
-                </p>
-              </div>
-            </DialogContent>
-          </Dialog>
-        ))}
-      </div>
+    <div>
+      {Object.entries(products).map(([subCatKey, productList]) => (
+        <div key={subCatKey} className="mb-8">
+          <div className="anchor h-2.5" id={`${subCatKey}`}></div>
+          <h2
+            className="text-2xl mb-6 flex items-center gap-2 border-b border-[#3F3D4F] pb-3 group cursor-pointer"
+            onClick={() => {
+              scrollToAnchor(subCatKey);
+            }}
+          >
+            {categories?.[subCatKey]?.icon} {subCatKey !== "all" && "Nos"}{" "}
+            {categories?.[subCatKey]?.name || subCatKey}
+            <LinkIcon className="ml-1.5 size-5  transition-all group-hover:opacity-100 opacity-0" />
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {productList.map((product) => (
+              <ProductItem key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

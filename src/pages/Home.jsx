@@ -1,22 +1,18 @@
 import { useProductFilterStore } from "@/hooks/useProductFilterStore";
 import { useEffect, useState } from "react";
-import CategoryTabs from "../components/CategoryTabs";
-import Copyright from "../components/Copyright";
-import Header from "../components/Header";
-import ProductList from "../components/ProductList";
 
 const categories = [
   { slug: "all", name: "Tous", image: "", icon: "" },
   {
     slug: "boissons",
     name: "Boissons",
-    image: "/categories/boissons.png",
+    image: "/images/categories/boissons.png",
     icon: "🥂",
   },
   {
     slug: "snacks",
     name: "Snacks",
-    image: "/categories/snacks.png",
+    image: "/images/categories/snacks.png",
     icon: "🍟",
   },
 ];
@@ -49,29 +45,12 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <div className="max-w-4xl mx-auto px-4 min-h-lvh">
-        <CategoryTabs
-          categoryFilter={selectedCategory}
-          setCategoryFilter={setCategory}
-          categories={categories}
-        />
-
-        <div className="mt-4">
-          {/* Place ton SearchBar ici si ce n’est pas déjà fait */}
-          {/* <SearchBar /> */}
-
-          {loading ? (
-            <p>Chargement...</p>
-          ) : (
-            <ProductList
-              filtered={filtered}
-              category={categories.find((c) => c.slug === selectedCategory)}
-            />
-          )}
-        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        laborum, corporis et quasi, eos amet necessitatibus nobis obcaecati
+        porro rerum, facere reiciendis est. Voluptate dolores rem inventore in
+        doloremque. Facilis.
       </div>
-      <Copyright />
     </>
   );
 };
