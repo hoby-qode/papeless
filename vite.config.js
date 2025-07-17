@@ -10,22 +10,23 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
+      includeAssets: ["products.json"],
       registerType: "autoUpdate",
       manifest: {
-        name: "Mon super menu",
-        short_name: "Menu",
+        name: "PATTAYA - Karaoké - Discothèque ",
+        short_name: "Pattaya",
         start_url: "/",
         display: "standalone",
         background_color: "#ffffff",
         theme_color: "#ff6600",
         icons: [
           {
-            src: "docusaurus.png",
+            src: "web-app-manifest-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "docusaurus.png",
+            src: "web-app-manifest-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
@@ -44,10 +45,44 @@ export default defineConfig({
               },
             },
           },
+          // ✅ Cache images locales
+          {
+            urlPattern: /\.(?:png|jpg|jpeg|webp|svg)$/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "images",
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 jours
+              },
+            },
+          },
+          {
+            urlPattern: /\/products\.json$/,
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "product-data",
+              expiration: {
+                maxEntries: 1,
+                maxAgeSeconds: 60 * 60 * 24, // 1 jour
+              },
+              networkTimeoutSeconds: 3,
+            },
+          },
         ],
       },
     }),
   ],
+  preview: {
+    host: "0.0.0.0",
+    port: 4173,
+    strictPort: true,
+    allowedHosts: ["pattaya.zone", "localhost", "127.0.0.1"],
+  },
+  // server: {
+  //   host: "0.0.0.0",
+  //   port: 4173,
+  // },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

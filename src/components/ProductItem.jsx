@@ -19,7 +19,7 @@ const ProductItem = ({ product }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="  cursor-pointer group">
+        <div className=" cursor-pointer group">
           <div
             className={`aspect-square w-full rounded-full border border-[#3F3D4F] overflow-hidden mb-2  bg-[#2A2A2A]  ${
               product.category === "boissons p-3"

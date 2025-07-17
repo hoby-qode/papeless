@@ -35,7 +35,7 @@ const ProductList = ({ products, categories }) => {
             <LinkIcon className="ml-1.5 size-5  transition-all group-hover:opacity-100 opacity-0" />
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {productList.map((product) => (
               <ProductItem key={product.id} product={product} />
             ))}

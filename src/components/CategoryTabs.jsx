@@ -17,13 +17,13 @@ const CategoryTabs = ({ categories }) => {
   };
 
   return (
-    <div className="relative h-[400px] w-full">
-      <div className="bg-glass absolute z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:max-w-4xl max-w-[90%]">
+    <div className="relative h-[400px] w-full  flex items-center justify-center p-8">
+      <div className="bg-glass z-20 w-full md:max-w-4xl max-w-[90%]">
         <div className="flex justify-center mb-7">
           <SearchBar />
         </div>
 
-        <div className="px-16">
+        <div className="sm:px-16 px-2">
           <Carousel
             opts={{
               align: "start",
@@ -39,9 +39,9 @@ const CategoryTabs = ({ categories }) => {
                       onClick={() => {
                         scrollToAnchor(category.slug);
                       }}
-                      className="md:basis-1/3 lg:basis-1/4"
+                      className="basis-full sm:basis-1/2  md:basis-1/4 flex flex-col items-center"
                     >
-                      <div className="w-full rounded-full border border-white text-white flex flex-col justify-center items-center cursor-pointer aspect-square">
+                      <div className="sm:w-full w-4/5 sm:max-w-full max-w-[200px] rounded-full border border-white text-white flex flex-col justify-center items-center cursor-pointer aspect-square">
                         {category.image && (
                           <div className="w-5/6 aspect-square">
                             <img
@@ -79,7 +79,7 @@ const CategoryTabs = ({ categories }) => {
         alt="fond"
         width={1024}
         height={225}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover absolute top-0 left-0"
       />
     </div>
   );

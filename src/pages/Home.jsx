@@ -119,7 +119,7 @@ const Home = () => {
           onClick={() => navigate("/categorie/snacks")}
         >
           <motion.h2
-            className="text-white md:text-8xl text-3xl -rotate-[7deg] absolute md:top-1/4 top-1/2 z-10 font-bold italic"
+            className="text-white md:text-6xl lg:text-8xl text-4xl -rotate-[7deg] absolute md:top-1/4 top-1/3 z-10 font-bold italic"
             style={{ y: parallaxSnacks }}
             initial={{ opacity: 0, y: 160 }}
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 160 }}
@@ -152,7 +152,7 @@ const Home = () => {
           onClick={() => navigate("/categorie/boissons")}
         >
           <motion.h2
-            className="text-white md:text-8xl text-3xl -rotate-[7deg] absolute md:top-1/6 top-1/2 z-10 font-bold italic"
+            className="text-white md:text-6xl lg:text-8xl text-4xl -rotate-[7deg] absolute md:top-1/6 top-1/4 z-10 font-bold italic"
             style={{ y: parallaxBoissons }}
             initial={{ opacity: 0, y: 160 }}
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 160 }}

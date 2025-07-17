@@ -93,11 +93,22 @@ const Category = () => {
 
   const searchTerm = useProductFilterStore((state) => state.searchTerm);
   useEffect(() => {
-    setLoading(true);
+    const cachedData = localStorage.getItem("products_cache");
+    if (cachedData) {
+      try {
+        setAllProducts(JSON.parse(cachedData));
+        setLoading(false);
+      } catch (e) {
+        console.warn("Cache corrompu, suppression...");
+        localStorage.removeItem("products_cache");
+      }
+    }
+
     fetch("/products.json")
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
+        localStorage.setItem("products_cache", JSON.stringify(data));
         setLoading(false);
       })
       .catch((err) => {
@@ -105,7 +116,6 @@ const Category = () => {
         setLoading(false);
       });
   }, []);
-
   // 1. Filtrer par catégorie principale
   const filtered = allProducts.filter((p) => p.category === category);
 
