@@ -2,6 +2,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import SearchBar from "./SearchBar";
 const CategoryTabs = ({ categories }) => {
@@ -49,17 +51,19 @@ const CategoryTabs = ({ categories }) => {
                       </div>
                     )}
                   </div>
-                  <div
+                  <h3
                     className="text-lg text-center text-primary mt-2 underline underline-offset-4 font-bold cursor-pointer"
                     onClick={() => {
                       scrollToAnchor(category.slug);
                     }}
                   >
                     {category.name}
-                  </div>
+                  </h3>
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselNext />
+            <CarouselPrevious />
           </Carousel>
         </div>
       </div>

@@ -11,18 +11,25 @@ const ProductList = ({ products, categories }) => {
       anchor.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  const sortedEntries = Object.entries(products).sort(([keyA], [keyB]) => {
+    if (keyA === "autres") return 1; // "autres" toujours en dernier
+    if (keyB === "autres") return -1;
+    return 0; // sinon on garde l'ordre actuel
+  });
   return (
     <div>
-      {Object.entries(products).map(([subCatKey, productList]) => (
+      {sortedEntries.map(([subCatKey, productList]) => (
         <div key={subCatKey} className="mb-8">
           <div className="anchor h-2.5" id={`${subCatKey}`}></div>
           <h2
-            className="text-2xl mb-6 flex items-center gap-2 border-b border-[#3F3D4F] pb-3 group cursor-pointer"
+            className="text-2xl mb-6 flex items-center gap-2 border-b border-[#3F3D4F] pb-3 group cursor-pointer capitalize"
             onClick={() => {
               scrollToAnchor(subCatKey);
             }}
           >
-            {categories?.[subCatKey]?.icon} {subCatKey !== "all" && "Nos"}{" "}
+            {categories?.[subCatKey]?.icon}{" "}
+            {subCatKey !== "all" && subCatKey !== "autres" && "Nos"}{" "}
             {categories?.[subCatKey]?.name || subCatKey}
             <LinkIcon className="ml-1.5 size-5  transition-all group-hover:opacity-100 opacity-0" />
           </h2>

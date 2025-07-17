@@ -1,3 +1,4 @@
+import { useProductFilterStore } from "@/hooks/useProductFilterStore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import CategoryTabs from "../components/CategoryTabs";
@@ -7,11 +8,11 @@ import ProductList from "../components/ProductList";
 
 const subCategorySnack = [
   { slug: "all", name: "Tous", image: "", icon: "" },
-  { slug: "apero", name: "Apéro", image: "", icon: "🍢" },
-  { slug: "pasta", name: "Pâtes", image: "", icon: "🍝" },
-  { slug: "pizza", name: "Pizza", image: "", icon: "🍕" },
+  { slug: "aperos", name: "Apéros", image: "", icon: "🍢" },
+  { slug: "pastas", name: "Pastas", image: "", icon: "🍝" },
+  { slug: "pizzas", name: "Pizzas", image: "", icon: "🍕" },
   { slug: "tacos", name: "Tacos", image: "", icon: "🌮" },
-  { slug: "salade", name: "Salade", image: "", icon: "🥗" },
+  { slug: "salades", name: "Salades", image: "", icon: "🥗" },
   { slug: "meat lover", name: "Meat Lover", image: "", icon: "🥩" },
   { slug: "fruits de mer", name: "Fruits de Mer", image: "", icon: "🦐" },
   { slug: "accompagnements", name: "Accompagnements", image: "", icon: "🍟" },
@@ -35,6 +36,7 @@ const Category = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const searchTerm = useProductFilterStore((state) => state.searchTerm);
   useEffect(() => {
     setLoading(true);
     fetch("/products.json")
@@ -52,8 +54,14 @@ const Category = () => {
   // 1. Filtrer par catégorie principale
   const filtered = allProducts.filter((p) => p.category === category);
 
-  // 2. Grouper par sous-catégorie
-  const groupedBySubCategory = filtered.reduce((acc, product) => {
+  // 2. Filtrer par searchTerm (si présent)
+  const searched = searchTerm
+    ? filtered.filter((p) =>
+        p.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : filtered;
+  // 3. Grouper par sous-catégorie
+  const groupedBySubCategory = searched.reduce((acc, product) => {
     const subCat = product.sous_category || "autres";
     if (!acc[subCat]) acc[subCat] = [];
     acc[subCat].push(product);

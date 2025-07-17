@@ -41,7 +41,7 @@ const Home = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
         >
-          Fais-toi kiffer
+          Fais-toi kiffer !!
         </motion.h1>
 
         <div className="mt-16">
@@ -50,7 +50,13 @@ const Home = () => {
             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           >
             <Link to="/" className=" block">
-              <img src="/logo.png" alt="logo" width={86} height={86} />
+              <img
+                src="/logo.svg"
+                alt="logo"
+                width={86}
+                height={86}
+                className=" border-2 border-white rounded-full "
+              />
             </Link>
           </motion.div>
         </div>

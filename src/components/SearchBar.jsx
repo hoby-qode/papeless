@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useProductFilterStore } from "@/hooks/useProductFilterStore";
 import { Search } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 const SearchBar = () => {
@@ -22,6 +22,10 @@ const SearchBar = () => {
     }
   };
 
+  useEffect(() => {
+    setInputValue(searchTerm || "");
+  }, [searchTerm]);
+
   return (
     <div className="flex gap-1 items-center border border-white rounded-md py-1.5 px-3">
       <Input
@@ -30,10 +34,10 @@ const SearchBar = () => {
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={handleKeyPress}
         onBlur={handleSearch}
-        placeholder={`Chercher ${
+        placeholder={`Rechercher ${
           category === "boissons" ? "à boire" : "à manger"
         }`}
-        className="border-none shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 py-1 h-8"
+        className="border-none shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 py-1 h-8 text-white placeholder:text-white"
       />
 
       <Button
@@ -42,7 +46,7 @@ const SearchBar = () => {
         onClick={handleSearch}
         className="p-1 h-8 w-8"
       >
-        <Search className="w-4 h-4 text-muted-foreground" />
+        <Search className="w-4 h-4 text-white" />
       </Button>
     </div>
   );

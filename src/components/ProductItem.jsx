@@ -21,13 +21,15 @@ const ProductItem = ({ product }) => {
       <DialogTrigger asChild>
         <div className="  cursor-pointer group">
           <div
-            className={`aspect-square w-full rounded-full border border-[#3F3D4F] overflow-hidden mb-2 p-3 bg-[#2A2A2A]  ${
-              product.category === "boissons" ? "border border-[#3F3D4F]" : ""
+            className={`aspect-square w-full rounded-full border border-[#3F3D4F] overflow-hidden mb-2  bg-[#2A2A2A]  ${
+              product.category === "boissons p-3"
+                ? "border border-[#3F3D4F]"
+                : ""
             }`}
           >
             {product.image && (
               <img
-                src={product.image}
+                src={`/images/produits/${product.image}`}
                 alt={product.name}
                 className={`w-full h-full transition-all group-hover:scale-110 ${
                   product.category === "boissons"
@@ -39,8 +41,12 @@ const ProductItem = ({ product }) => {
           </div>
           <div className="px-3">
             <div className="flex justify-between gap-3 items-end">
-              <div className="flex flex-col">
-                <h3 className="text-base  text-white">{product.name}</h3>
+              <div
+                className="flex flex-col "
+                style={{ width: "calc(100% - 40px)" }}
+              >
+                <h3 className="text-base text-white">{product.name}</h3>
+                <p className="truncate w-full">{product.ingredients}</p>
                 <p className="m-0 text-[14px] text-white">
                   {product.price?.toLocaleString?.()} Ar
                 </p>
@@ -58,8 +64,8 @@ const ProductItem = ({ product }) => {
           <DialogTitle className="text-center text-3xl text-white">
             {product.name}
           </DialogTitle>
-          <DialogDescription className="hidden">
-            {product.name}
+          <DialogDescription className="text-center text-lg text-gray-400">
+            <p className=" ">{product.ingredients}</p>
           </DialogDescription>
         </DialogHeader>
 
@@ -70,7 +76,7 @@ const ProductItem = ({ product }) => {
                 (img, index) => (
                   <CarouselItem key={index}>
                     <img
-                      src={img}
+                      src={`/images/produits/${img}`}
                       alt={`${product.name} ${index}`}
                       className={`w-full h-full ${
                         product.category === "boissons"
@@ -86,12 +92,14 @@ const ProductItem = ({ product }) => {
             <CarouselNext />
           </Carousel>
 
-          <p>
-            Catégorie : <strong>{product.category}</strong>
-          </p>
-          <p>
-            Prix : <strong>{product.price?.toLocaleString?.()} Ar</strong>
-          </p>
+          <div className="flex flex-col gap-1 items-center">
+            <p className="m-0 text-lg text-white font-medium">
+              Catégorie : <strong>{product.category}</strong>
+            </p>
+            <p className="m-0 text-base text-white font-medium">
+              Prix : <strong>{product.price?.toLocaleString?.()} Ar</strong>
+            </p>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
