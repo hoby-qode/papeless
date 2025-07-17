@@ -516,7 +516,7 @@
                                    ]
     },
     {
-        "image":  "",
+        "image":  "36.png",
         "id":  45,
         "category":  "snacks",
         "price":  12000,
@@ -564,7 +564,7 @@
                                    ]
     },
     {
-        "image":  "",
+        "image":  "39.png",
         "id":  49,
         "category":  "snacks",
         "price":  25000,
@@ -612,7 +612,7 @@
                                    ]
     },
     {
-        "image":  "",
+        "image":  "40.png",
         "id":  53,
         "category":  "snacks",
         "price":  13000,
@@ -660,7 +660,7 @@
                                    ]
     },
     {
-        "image":  "",
+        "image":  "43.png",
         "id":  57,
         "category":  "snacks",
         "price":  15000,
@@ -792,7 +792,7 @@
                                    ]
     },
     {
-        "image":  "",
+        "image":  "51.png",
         "id":  68,
         "category":  "snacks",
         "price":  15000,

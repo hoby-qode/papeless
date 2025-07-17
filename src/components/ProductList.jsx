@@ -31,6 +31,7 @@ const ProductList = ({ products, categories }) => {
             {categories?.[subCatKey]?.icon}{" "}
             {subCatKey !== "all" && subCatKey !== "autres" && "Nos"}{" "}
             {categories?.[subCatKey]?.name || subCatKey}
+            {subCatKey === "accompagnements" && <>&nbsp;(gratuit)</>}
             <LinkIcon className="ml-1.5 size-5  transition-all group-hover:opacity-100 opacity-0" />
           </h2>
 

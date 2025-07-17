@@ -47,9 +47,11 @@ const ProductItem = ({ product }) => {
               >
                 <h3 className="text-base text-white">{product.name}</h3>
                 <p className="truncate w-full">{product.ingredients}</p>
-                <p className="m-0 text-[14px] text-white">
-                  {product.price?.toLocaleString?.()} Ar
-                </p>
+                {product.price != "0" && (
+                  <p className="m-0 text-[14px] text-white">
+                    {product.price?.toLocaleString?.()} Ar
+                  </p>
+                )}
               </div>
               <Button className="cursor-pointer h-auto text-white">
                 <Search />
@@ -96,9 +98,11 @@ const ProductItem = ({ product }) => {
             <p className="m-0 text-lg text-white font-medium">
               Catégorie : <strong>{product.category}</strong>
             </p>
-            <p className="m-0 text-base text-white font-medium">
-              Prix : <strong>{product.price?.toLocaleString?.()} Ar</strong>
-            </p>
+            {product.price != "0" && (
+              <p className="m-0 text-base text-white font-medium">
+                Prix : <strong>{product.price?.toLocaleString?.()} Ar</strong>
+              </p>
+            )}
           </div>
         </div>
       </DialogContent>
