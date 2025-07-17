@@ -133,8 +133,228 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Black.eot");
+    src: url("/fonts/BarlowSemiCondensed-Black.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Black.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
 
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-BlackItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-BlackItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-BlackItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Bold.eot");
+    src: url("/fonts/BarlowSemiCondensed-Bold.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Bold.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-BoldItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-BoldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-BoldItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-ExtraBoldItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-ExtraBoldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-ExtraBoldItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-ExtraBoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed ExLight";
+    src: url("/fonts/BarlowSemiCondensed-ExtraLight.eot");
+    src: url("/fonts/BarlowSemiCondensed-ExtraLight.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-ExtraLight.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed ExLight";
+    src: url("/fonts/BarlowSemiCondensed-ExtraLightItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-ExtraLightItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-ExtraLightItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-ExtraLightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-ExtraBold.eot");
+    src: url("/fonts/BarlowSemiCondensed-ExtraBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-ExtraBold.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-LightItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-LightItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-LightItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Italic.eot");
+    src: url("/fonts/BarlowSemiCondensed-Italic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Italic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Light.eot");
+    src: url("/fonts/BarlowSemiCondensed-Light.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Light.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-MediumItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-MediumItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-MediumItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Medium.eot");
+    src: url("/fonts/BarlowSemiCondensed-Medium.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Medium.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-SemiBold.eot");
+    src: url("/fonts/BarlowSemiCondensed-SemiBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-SemiBold.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Regular.eot");
+    src: url("/fonts/BarlowSemiCondensed-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Regular.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-SemiBoldItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-SemiBoldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-SemiBoldItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-Thin.eot");
+    src: url("/fonts/BarlowSemiCondensed-Thin.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-Thin.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("/fonts/BarlowSemiCondensed-ThinItalic.eot");
+    src: url("/fonts/BarlowSemiCondensed-ThinItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BarlowSemiCondensed-ThinItalic.woff2") format("woff2"),
+      url("/fonts/BarlowSemiCondensed-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+}
 @layer utilities {
   .neon {
     display: inline-block;
