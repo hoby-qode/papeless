@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-center px-4 py-6 max-w-4xl mx-auto gap-12 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center justify-center px-4 py-6 max-w-4xl mx-auto md:gap-12 gap-4 overflow-hidden">
         <Button
           variant={category === "snacks" ? "" : "ghost"}
           className={`text-2xl font-bold p-0 h-min cursor-pointer ${

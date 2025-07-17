@@ -1,6 +1,6 @@
 import { LinkIcon } from "lucide-react";
+import slugify from "slugify";
 import ProductItem from "./ProductItem";
-
 const ProductList = ({ products, categories }) => {
   if (!products || Object.keys(products).length === 0) {
     return <p>Aucun produit disponible.</p>;
@@ -21,11 +21,11 @@ const ProductList = ({ products, categories }) => {
     <div>
       {sortedEntries.map(([subCatKey, productList]) => (
         <div key={subCatKey} className="mb-8">
-          <div className="anchor h-2.5" id={`${subCatKey}`}></div>
+          <div className="anchor h-2.5" id={`${slugify(subCatKey)}`}></div>
           <h2
             className="text-2xl mb-6 flex items-center gap-2 border-b border-[#3F3D4F] pb-3 group cursor-pointer capitalize"
             onClick={() => {
-              scrollToAnchor(subCatKey);
+              scrollToAnchor(slugify(subCatKey));
             }}
           >
             {categories?.[subCatKey]?.icon}{" "}

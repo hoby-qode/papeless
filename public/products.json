@@ -1,17 +1,5 @@
 ﻿[
     {
-        "image":  "samoussas.jpg",
-        "id":  1,
-        "category":  "snacks",
-        "price":  3000,
-        "name":  "Samoussa viande",
-        "sous_category":  "",
-        "ingredients":  "",
-        "images_supplementaires":  [
-
-                                   ]
-    },
-    {
         "image":  "1.png",
         "id":  2,
         "category":  "boissons",
@@ -556,7 +544,7 @@
         "id":  47,
         "category":  "snacks",
         "price":  20000,
-        "name":  "PIZZA Poulet",
+        "name":  "PIZZA Poulet laqué extra\n",
         "sous_category":  "pizzas",
         "ingredients":  "sauce tomate,poulet,fromage,origan",
         "images_supplementaires":  [
