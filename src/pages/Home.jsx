@@ -11,34 +11,63 @@ const Home = () => {
   const parallaxSnacks = useTransform(scrollY, [0, 300], [0, -50]);
   const parallaxBoissons = useTransform(scrollY, [0, 300], [0, -50]);
 
+  // Attendre que toutes les images soient chargées
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 300);
-    return () => clearTimeout(timer);
+    const handleImagesLoaded = () => {
+      const allImages = Array.from(document.images);
+      const unloaded = allImages.filter((img) => !img.complete);
+
+      if (unloaded.length === 0) {
+        setIsLoaded(true);
+        return;
+      }
+
+      let loadedCount = 0;
+      unloaded.forEach((img) => {
+        img.addEventListener("load", () => {
+          loadedCount += 1;
+          if (loadedCount === unloaded.length) {
+            setIsLoaded(true);
+          }
+        });
+        img.addEventListener("error", () => {
+          loadedCount += 1;
+          if (loadedCount === unloaded.length) {
+            setIsLoaded(true);
+          }
+        });
+      });
+    };
+
+    handleImagesLoaded();
   }, []);
 
   return (
     <div className="relative mx-auto min-h-lvh overflow-hidden">
-      {/* Fondu noir d'intro */}
+      {/* Loader avec logo tournant */}
       {!isLoaded && (
-        <motion.div
-          className="fixed inset-0 bg-black z-50"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-        />
+        <div className="fixed top-0 inset-0 z-50 bg-black flex items-center justify-center">
+          <motion.img
+            src="/logo.svg"
+            alt="loading-logo"
+            className="w-20 h-20 border-2 border-white rounded-full"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+          />
+        </div>
       )}
 
       {/* Titre + Logo */}
       <motion.div
         className="absolute top-8 w-full flex flex-col items-center gap-4 z-20"
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : -50 }}
         transition={{ duration: 1.2, delay: 1 }}
       >
         <motion.h1
           className="text-white text-5xl font-bold tracking-tight"
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{ scale: isLoaded ? 1 : 0.8, opacity: isLoaded ? 1 : 0 }}
           transition={{ delay: 1.2, duration: 0.6 }}
         >
           Fais-toi kiffer !!
@@ -68,7 +97,7 @@ const Home = () => {
         alt="fond"
         className="absolute w-full h-full object-cover top-0 left-0 z-0"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: isLoaded ? 1 : 0 }}
         transition={{ delay: 2, duration: 1.2 }}
       />
 
@@ -78,7 +107,7 @@ const Home = () => {
         alt="fond"
         className="absolute w-full h-[210px] object-cover bottom-0 left-0 z-[5]"
         initial={{ y: 210 }}
-        animate={{ y: 0 }}
+        animate={{ y: isLoaded ? 0 : 210 }}
         transition={{ delay: 0.5, duration: 1 }}
       />
 
@@ -93,7 +122,7 @@ const Home = () => {
             className="text-white text-8xl -rotate-[7deg] absolute top-1/4 z-10 font-bold italic"
             style={{ y: parallaxSnacks }}
             initial={{ opacity: 0, y: 160 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 160 }}
             transition={{ delay: 1.2, duration: 1.8, ease: "backInOut" }}
           >
             Snacks
@@ -105,7 +134,10 @@ const Home = () => {
             className="group-hover:scale-110 transition-transform duration-300 ease-out
              absolute w-5/6 h-auto left-1/2 -translate-x-1/2 bottom-10 z-0 max-w-[680px]"
             initial={{ y: 1800, opacity: 0 }}
-            animate={{ y: [300, -30, 0], opacity: 1 }}
+            animate={{
+              y: isLoaded ? [300, -30, 0] : 1800,
+              opacity: isLoaded ? 1 : 0,
+            }}
             transition={{
               duration: 1.5,
               ease: "easeOut",
@@ -123,26 +155,20 @@ const Home = () => {
             className="text-white text-8xl -rotate-[7deg] absolute top-1/6 z-10 font-bold italic"
             style={{ y: parallaxBoissons }}
             initial={{ opacity: 0, y: 160 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 160 }}
             transition={{ delay: 1.2, duration: 1.8, ease: "backInOut" }}
           >
             Boissons
           </motion.h2>
 
-          {/* <motion.img
-            src="/images/fond/boissons.png"
-            alt="boissons"
-            className="absolute w-2/3 h-auto left-1/2 -translate-x-1/2 bottom-10 z-0 max-w-[400px]"
-            initial={{ y: 300, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.6, duration: 1 }}
-            whileHover={{ scale: 1.05 }}
-          /> */}
           <motion.img
             src="/images/fond/boissons.png"
             alt="boissons"
             initial={{ y: 1800, opacity: 0 }}
-            animate={{ y: [300, -30, 0], opacity: 1 }}
+            animate={{
+              y: isLoaded ? [300, -30, 0] : 1800,
+              opacity: isLoaded ? 1 : 0,
+            }}
             transition={{
               duration: 2.5,
               ease: "easeOut",
