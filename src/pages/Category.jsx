@@ -39,13 +39,13 @@ const subCategorySnack = [
     icon: "🥗",
   },
   {
-    slug: "meat lover",
+    slug: "meat-lover",
     name: "Meat Lover",
     image: "/images/categories/meat-lover.png",
     icon: "🥩",
   },
   {
-    slug: "fruits de mer",
+    slug: "fruits-de-mer",
     name: "Fruits de Mer",
     image: "/images/categories/22ad216e.png",
     icon: "🦐",
@@ -71,12 +71,6 @@ const subCategoryDrink = [
     name: "Alcoolisées",
     image: "/images/categories/boissons.png",
     icon: "🍸",
-  },
-  {
-    slug: "cocktails",
-    name: "Cocktails",
-    image: "/images/categories/cocktail.png",
-    icon: "🍹",
   },
   {
     slug: "boissons-de-saison",

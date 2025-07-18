@@ -173,7 +173,7 @@
         "category":  "boissons",
         "price":  7000,
         "name":  "LE FRUIT",
-        "sous_category":  "cocktails",
+        "sous_category":  "boissons de saison",
         "ingredients":  "",
         "images_supplementaires":  [
 
@@ -185,7 +185,7 @@
         "category":  "boissons",
         "price":  6000,
         "name":  "JUS GM",
-        "sous_category":  "cocktails",
+        "sous_category":  "boissons de saison",
         "ingredients":  "",
         "images_supplementaires":  [
 
@@ -197,7 +197,7 @@
         "category":  "boissons",
         "price":  3500,
         "name":  "JUS PM",
-        "sous_category":  "cocktails",
+        "sous_category":  "boissons de saison",
         "ingredients":  "",
         "images_supplementaires":  [
 
@@ -816,7 +816,7 @@
                                    ]
     },
     {
-        "image":  "52.png",
+        "image":  "55.jpg",
         "id":  70,
         "category":  "snacks",
         "price":  15000,
