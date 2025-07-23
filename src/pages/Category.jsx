@@ -1,11 +1,13 @@
 import { useProductFilterStore } from "@/hooks/useProductFilterStore";
-import { useEffect, useState } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import { ChevronUp } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import CategoryTabs from "../components/CategoryTabs";
 import Copyright from "../components/Copyright";
 import Header from "../components/Header";
 import ProductList from "../components/ProductList";
-
 const subCategorySnack = [
   { slug: "all", name: "Tous", image: "", icon: "" },
   {
@@ -84,7 +86,43 @@ const Category = () => {
   const { category } = useParams(); // "boissons" ou "snacks"
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const scrollRef = useRef(null);
+  const locoScrollRef = useRef(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    if (!scrollRef.current) return;
 
+    const scrollInstance = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      smartphone: { smooth: true },
+      getDirection: true,
+      getSpeed: true,
+    });
+
+    locoScrollRef.current = scrollInstance;
+
+    scrollInstance.on("scroll", (args) => {
+      const shouldShow = args.scroll.y > 100;
+      setShowScrollTop((prev) => {
+        if (prev !== shouldShow) return shouldShow;
+        return prev;
+      });
+    });
+
+    return () => {
+      scrollInstance.destroy();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      // Donne le temps à React de rendre tous les éléments (ProductList, images, etc.)
+      setTimeout(() => {
+        locoScrollRef.current?.update();
+      }, 300); // délai court pour laisser le temps au DOM de s'afficher
+    }
+  }, [loading]);
   const searchTerm = useProductFilterStore((state) => state.searchTerm);
   useEffect(() => {
     const cachedData = localStorage.getItem("products_cache");
@@ -129,34 +167,52 @@ const Category = () => {
 
   return (
     <div className="bg-app">
-      <div className="relative z-10">
-        <Header />
-        <CategoryTabs
-          categories={
-            category === "boissons" ? subCategoryDrink : subCategorySnack
-          }
-        />
+      <div className="bg-app-container" data-scroll-container ref={scrollRef}>
+        <div className="relative z-10">
+          <Header />
+          <CategoryTabs
+            categories={
+              category === "boissons" ? subCategoryDrink : subCategorySnack
+            }
+          />
 
-        <div className="max-w-4xl mx-auto px-4 min-h-lvh">
-          <div className="mt-4">
-            {loading ? (
-              <p>Chargement...</p>
-            ) : (
-              <ProductList
-                products={groupedBySubCategory}
-                categories={(category === "boissons"
-                  ? subCategoryDrink
-                  : subCategorySnack
-                ).reduce((acc, cat) => {
-                  acc[cat.slug] = cat;
-                  return acc;
-                }, {})}
-              />
-            )}
+          <div className="max-w-4xl mx-auto px-4 min-h-lvh">
+            <div className="mt-4">
+              {loading ? (
+                <p>Chargement...</p>
+              ) : (
+                <ProductList
+                  products={groupedBySubCategory}
+                  categories={(category === "boissons"
+                    ? subCategoryDrink
+                    : subCategorySnack
+                  ).reduce((acc, cat) => {
+                    acc[cat.slug] = cat;
+                    return acc;
+                  }, {})}
+                />
+              )}
+            </div>
           </div>
+
+          <Copyright />
         </div>
-        <Copyright />
       </div>
+      {showScrollTop && (
+        <button
+          onClick={() => {
+            if (locoScrollRef.current) {
+              locoScrollRef.current.scrollTo("#header", {
+                duration: 800,
+                easing: [0.25, 0.0, 0.35, 1.0],
+              });
+            }
+          }}
+          className="size-12 fixed z-[99999999] top-[93vh] right-4 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer"
+        >
+          <ChevronUp />
+        </button>
+      )}
     </div>
   );
 };

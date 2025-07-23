@@ -41,13 +41,13 @@ const CategoryTabs = ({ categories }) => {
                       }}
                       className="basis-full sm:basis-1/2  md:basis-1/4 flex flex-col items-center"
                     >
-                      <div className="sm:w-full w-4/5 sm:max-w-full max-w-[200px] rounded-full border border-white text-white flex flex-col justify-center items-center cursor-pointer aspect-square">
+                      <div className="sm:w-full group w-4/5 sm:max-w-full max-w-[200px] rounded-full border border-white text-white flex flex-col justify-center items-center cursor-pointer aspect-square">
                         {category.image && (
                           <div className="w-5/6 aspect-square">
                             <img
                               src={category.image}
                               alt={category.name}
-                              className="w-full h-full object-cover "
+                              className="w-full h-full object-cover group-hover:scale-110 transition-all "
                             />
                           </div>
                         )}

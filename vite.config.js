@@ -97,21 +97,21 @@ export default defineConfig({
       },
     }),
   ],
-  preview: {
-    host: "0.0.0.0",
-    port: 4173,
-    strictPort: true,
-    allowedHosts: ["pattaya.zone", "localhost", "127.0.0.1"],
-  },
+  // preview: {
+  //   host: "0.0.0.0",
+  //   port: 4173,
+  //   strictPort: true,
+  //   allowedHosts: ["pattaya.zone", "localhost", "127.0.0.1"],
+  // },
   // server: {
   //   host: "0.0.0.0",
   //   port: 4173,
-  //   https: {
-  //     key: fs.readFileSync(path.resolve(__dirname, "./cert/localhost-key.pem")),
-  //     cert: fs.readFileSync(
-  //       path.resolve(__dirname, "./cert/localhost-cert.pem")
-  //     ),
-  //   },
+  //   // https: {
+  //   //   key: fs.readFileSync(path.resolve(__dirname, "./cert/localhost-key.pem")),
+  //   //   cert: fs.readFileSync(
+  //   //     path.resolve(__dirname, "./cert/localhost-cert.pem")
+  //   //   ),
+  //   // },
   // },
   resolve: {
     alias: {

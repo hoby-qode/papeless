@@ -10,7 +10,10 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-center px-4 py-6 max-w-4xl mx-auto md:gap-12 gap-4 overflow-hidden">
+      <div
+        className="flex flex-col md:flex-row items-center justify-center px-4 py-6 max-w-4xl mx-auto md:gap-12 gap-4 overflow-hidden"
+        id="header"
+      >
         <Button
           variant={category === "snacks" ? "" : "ghost"}
           className={`text-2xl font-bold p-0 h-min cursor-pointer ${
@@ -27,7 +30,7 @@ const Header = () => {
         </Button>
 
         <Link to="/" onClick={handleClearSearch}>
-          <img src="/logo.png" alt="logo" width={86} height={86} />
+          <img src="/logo.svg" alt="logo" width={86} height={86} />
         </Link>
 
         <Button
